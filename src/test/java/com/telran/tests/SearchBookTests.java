@@ -15,8 +15,8 @@ public class SearchBookTests extends TestBase{
     }
 
     @Test
-    public void searchBookPositiveTest(){
+    public void searchBookPositiveForGuestTest(){
         new BookStorePage(driver).typeInSearchBookInput(BookData.BOOK_NAME);
-        Assert.assertTrue(new BookStorePage(driver).takeNameOfBook(BookData.BOOK_NAME).contains(BookData.BOOK_NAME));
+        Assert.assertTrue(new BookStorePage(driver).takeNameOfBook().contains(BookData.BOOK_NAME));
     }
 }
