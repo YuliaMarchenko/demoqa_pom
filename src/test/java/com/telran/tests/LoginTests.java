@@ -1,5 +1,6 @@
 package com.telran.tests;
 
+import com.telran.data.UserData;
 import com.telran.pages.BookStorePage;
 import com.telran.pages.HomePage;
 import com.telran.pages.LoginPage;
@@ -18,8 +19,8 @@ public class LoginTests extends TestBase {
 
     @Test
     public void LoginPositiveTest() {
-        new LoginPage(driver).login("test1@test.com", "testTEST12!");
-        new ProfilePage(driver).verifyUserName("test1@test.com");
+        new LoginPage(driver).login(UserData.USER_NAME, UserData.USER_PASSWORD);
+        new ProfilePage(driver).verifyUserName(UserData.USER_NAME);
     }
 
     @AfterMethod
