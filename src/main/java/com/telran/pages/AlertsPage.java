@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AlertsPage extends BasePage{
+public class AlertsPage extends BasePage {
 
     public AlertsPage(WebDriver driver) {
         super(driver);
@@ -15,7 +15,7 @@ public class AlertsPage extends BasePage{
     @FindBy(id = "alertButton")
     WebElement timerAlertButton;
 
-    public AlertsPage acceptTimerAlert(){
+    public AlertsPage acceptTimerAlert() {
         click(timerAlertButton);
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.alertIsPresent()).accept();
@@ -25,11 +25,11 @@ public class AlertsPage extends BasePage{
     @FindBy(id = "confirmButton")
     WebElement confirmButton;
 
-    public AlertsPage chooseConfirmButton(String text){
+    public AlertsPage chooseConfirmButton(String text) {
         click(confirmButton);
-        if (text != null && text.equals("OK")){
+        if (text != null && text.equals("OK")) {
             driver.switchTo().alert().accept();
-        } else if (text != null && text.equals("Cancel")){
+        } else if (text != null && text.equals("Cancel")) {
             driver.switchTo().alert().dismiss();
         }
         return this;
@@ -38,7 +38,23 @@ public class AlertsPage extends BasePage{
     @FindBy(id = "confirmResult")
     WebElement confirmResult;
 
-    public String getConfirmResult(){
+    public String getConfirmResult() {
         return confirmResult.getText();
+    }
+
+    @FindBy(id = "promtButton")
+    WebElement promtButton;
+
+    public AlertsPage sendTextToAllert(String message) {
+        clickWithJSExecutor(promtButton, 0, 200);
+        if (message != null) {
+            driver.switchTo().alert().sendKeys(message);
+        }
+        driver.switchTo().alert().accept();
+        return this;
+    }
+
+    public String getConfirmMessageResult(){
+        return null;
     }
 }

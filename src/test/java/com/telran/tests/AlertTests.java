@@ -25,4 +25,10 @@ public class AlertTests extends TestBase{
         new AlertsPage(driver).chooseConfirmButton("Cancel");
         Assert.assertTrue(new AlertsPage(driver).getConfirmResult().contains("Cancel"));
     }
+
+    @Test
+    public void alertSendTextTest(){
+        new AlertsPage(driver).sendTextToAllert("Hello World");
+        Assert.assertTrue(new AlertsPage(driver).getConfirmMessageResult().contains("World"));
+    }
 }
