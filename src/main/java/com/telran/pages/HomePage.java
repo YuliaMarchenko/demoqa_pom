@@ -17,4 +17,12 @@ public class HomePage extends BasePage{
         clickWithJSExecutor(bookStoreAppTitle, 0, 800);
         return new BookStorePage(driver);
     }
+
+    @FindBy(xpath = "//div[@class='category-cards']/div[3]")
+    WebElement alertsFrameWindows;
+
+    public SidePanelPage selectAlertsFrameWindows(){
+        clickWithJSExecutor(alertsFrameWindows, 0, 300);
+        return new SidePanelPage(driver);
+    }
 }

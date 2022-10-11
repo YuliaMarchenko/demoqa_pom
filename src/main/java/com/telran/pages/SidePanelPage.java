@@ -17,4 +17,12 @@ public class SidePanelPage extends BasePage{
         clickWithJSExecutor(profileButton, 0, 500);
         return new ProfilePage(driver);
     }
+
+    @FindBy(xpath = "//span[.='Alerts']")
+    WebElement alertsButton;
+
+    public AlertsPage selectAlerts(){
+        clickWithJSExecutor(alertsButton, 0, 300);
+        return new AlertsPage(driver);
+    }
 }
