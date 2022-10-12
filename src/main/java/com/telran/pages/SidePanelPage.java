@@ -25,4 +25,12 @@ public class SidePanelPage extends BasePage{
         clickWithJSExecutor(alertsButton, 0, 300);
         return new AlertsPage(driver);
     }
+
+    @FindBy(xpath = "//span[.='Browser Windows']")
+    WebElement browserWindowsButton;
+
+    public BrowserWindowsPage selectBrowserWindows(){
+        clickWithJSExecutor(browserWindowsButton, 0,200);
+        return new BrowserWindowsPage(driver);
+    }
 }

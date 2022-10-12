@@ -1,0 +1,2 @@
+6878 [main] INFO  com.telran.tests.TestBase - Test start alertSendTextTest with data: []
+11589 [main] ERROR com.telran.tests.TestBase - Failed: alertSendTextTest

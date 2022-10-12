@@ -1,5 +1,6 @@
 package com.telran.tests;
 
+import com.telran.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -42,6 +43,7 @@ public class TestBase {
             logger.info("Passed: " + result.getMethod().getMethodName());
         } else {
             logger.error("Failed: " + result.getMethod().getMethodName());
+            new BasePage(driver).takeScreenshot();
         }
     }
 }
