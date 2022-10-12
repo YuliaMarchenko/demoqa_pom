@@ -1,5 +1,6 @@
-package com.telran.pages;
+package com.telran.pages.alertsWindows;
 
+import com.telran.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,7 +55,10 @@ public class AlertsPage extends BasePage {
         return this;
     }
 
+    @FindBy(id = "promptResult")
+    WebElement promptResult;
+
     public String getConfirmMessageResult(){
-        return null;
+        return promptResult.getText();
     }
 }

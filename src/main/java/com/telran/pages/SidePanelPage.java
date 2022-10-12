@@ -1,5 +1,10 @@
 package com.telran.pages;
 
+import com.telran.pages.alertsWindows.AlertsPage;
+import com.telran.pages.alertsWindows.BrowserWindowsPage;
+import com.telran.pages.bookstore.ProfilePage;
+import com.telran.pages.elements.ButtonsPage;
+import com.telran.pages.widgets.SelectMenuPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,5 +37,21 @@ public class SidePanelPage extends BasePage{
     public BrowserWindowsPage selectBrowserWindows(){
         clickWithJSExecutor(browserWindowsButton, 0,200);
         return new BrowserWindowsPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Buttons']")
+    WebElement button;
+
+    public ButtonsPage selectButtons(){
+        clickWithJSExecutor(button, 0, 500);
+        return new ButtonsPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Select Menu']")
+    WebElement selectMenu;
+
+    public SelectMenuPage getSelectMenu(){
+        clickWithJSExecutor(selectMenu, 0, 500);
+        return new SelectMenuPage(driver);
     }
 }

@@ -1,5 +1,6 @@
-package com.telran.pages;
+package com.telran.pages.alertsWindows;
 
+import com.telran.pages.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrowserWindowsPage extends BasePage{
+public class BrowserWindowsPage extends BasePage {
 
     public BrowserWindowsPage(WebDriver driver) {
         super(driver);
