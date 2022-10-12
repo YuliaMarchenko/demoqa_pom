@@ -45,7 +45,7 @@ public class AlertsPage extends BasePage {
     @FindBy(id = "promtButton")
     WebElement promtButton;
 
-    public AlertsPage sendTextToAllert(String message) {
+    public AlertsPage sendTextToAlert(String message) {
         clickWithJSExecutor(promtButton, 0, 200);
         if (message != null) {
             driver.switchTo().alert().sendKeys(message);

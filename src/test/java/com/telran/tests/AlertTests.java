@@ -28,7 +28,7 @@ public class AlertTests extends TestBase{
 
     @Test
     public void alertSendTextTest(){
-        new AlertsPage(driver).sendTextToAllert("Hello World");
+        new AlertsPage(driver).sendTextToAlert("Hello World");
         Assert.assertTrue(new AlertsPage(driver).getConfirmMessageResult().contains("World"));
     }
 }
