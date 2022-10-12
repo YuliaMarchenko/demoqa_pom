@@ -1,0 +1,2 @@
+6788 [main] INFO  com.telran.tests.TestBase - Test start clickOnMultiSelectDropDownTest with data: []
+13701 [main] ERROR com.telran.tests.TestBase - Failed: clickOnMultiSelectDropDownTest
