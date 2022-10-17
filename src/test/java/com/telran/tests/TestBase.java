@@ -32,7 +32,7 @@ public class TestBase {
         logger.info("Test start " + m.getName() + " with data: " + Arrays.asList(p));
     }
 
-    @AfterMethod()
+    @AfterMethod(enabled = false)
     public void tearDown() {
         driver.quit();
     }

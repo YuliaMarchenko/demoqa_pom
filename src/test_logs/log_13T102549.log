@@ -1,0 +1,2 @@
+6632 [main] INFO  com.telran.tests.TestBase - Test start handleNestedFramesTest with data: []
+24402 [main] ERROR com.telran.tests.TestBase - Failed: handleNestedFramesTest
