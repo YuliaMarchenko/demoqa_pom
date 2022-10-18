@@ -1,0 +1,2 @@
+7471 [main] INFO  com.telran.tests.TestBase - Test start createNewStudentTest with data: []
+16233 [main] ERROR com.telran.tests.TestBase - Failed: createNewStudentTest

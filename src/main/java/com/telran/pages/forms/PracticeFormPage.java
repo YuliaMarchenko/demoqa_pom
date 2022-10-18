@@ -2,10 +2,10 @@ package com.telran.pages.forms;
 
 import com.telran.data.StudentData;
 import com.telran.pages.BasePage;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class PracticeFormPage extends BasePage {
 
@@ -96,7 +96,7 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "uploadPicture")
     WebElement uploadPicture;
 
-    public PracticeFormPage uploadFile(String path){
+    public PracticeFormPage uploadFile(String path) {
         uploadPicture.sendKeys(path);
         return this;
     }
@@ -116,7 +116,7 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "currentAddress")
     WebElement currentAddress;
 
-    public PracticeFormPage enterPersonalData(String name, String surname, String email, String mobil, String address){
+    public PracticeFormPage enterPersonalData(String name, String surname, String email, String mobil, String address) {
         firstName.sendKeys(name);
         lastName.sendKeys(surname);
         userEmail.sendKeys(email);
@@ -126,19 +126,27 @@ public class PracticeFormPage extends BasePage {
     }
 
     @FindBy(id = "state")
+    WebElement stateId;
+
+    @FindBy(id = "react-select-3-input")
     WebElement state;
 
-    public PracticeFormPage enterState(String stateInput){
-        typeWithJSExecutor(state, stateInput, 0, 300);
+    public PracticeFormPage enterState(String stateInput) {
+        click(stateId);
+        state.sendKeys(stateInput);
         state.sendKeys(Keys.ENTER);
         return this;
     }
 
     @FindBy(id = "city")
+    WebElement cityId;
+
+    @FindBy(id = "react-select-4-input")
     WebElement city;
 
-    public PracticeFormPage enterCity(String cityInput){
-        typeWithJSExecutor(city, cityInput, 0, 300);
+    public PracticeFormPage enterCity(String cityInput) {
+        click(cityId);
+        city.sendKeys(cityInput);
         city.sendKeys(Keys.ENTER);
         return this;
     }
@@ -146,15 +154,53 @@ public class PracticeFormPage extends BasePage {
     @FindBy(id = "submit")
     WebElement submit;
 
-    public PracticeFormPage clickOnSubmit(){
-        clickWithJSExecutor(submit, 0, 300);
+    public PracticeFormPage clickOnSubmit() {
+        clickWithRectangle(submit, 2, 3);
         return this;
     }
 
     @FindBy(id = "example-modal-sizes-title-lg")
     WebElement subForm;
 
-    public String submittingForm(){
+    public String submittingForm() {
         return subForm.getText();
+    }
+
+    public PracticeFormPage hideIframes() {
+        hideAd();
+        hideFooter();
+        return this;
+    }
+
+    @FindBy(id = "closeLargeModal")
+    WebElement close;
+
+    public PracticeFormPage closeModalDialog() {
+        closeBanner();
+        clickWithJSExecutor(close, 0, 900);
+        return this;
+    }
+
+    @FindBy(css = ".react-datepicker__month-select")
+    WebElement month;
+
+    @FindBy(css = ".react-datepicker__year-select")
+    WebElement year;
+
+    public PracticeFormPage chooseDate(String m, String y, String day) {
+
+        click(dateOfBirth);
+
+        Select select = new Select(month);
+        select.selectByVisibleText(m);
+
+        click(year);
+
+        Select select1 = new Select(year);
+        select1.selectByVisibleText(y);
+
+        driver.findElement(By.xpath("//div[@class='react-datepicker__week']//div[.='" + day + "']"));
+
+        return this;
     }
 }

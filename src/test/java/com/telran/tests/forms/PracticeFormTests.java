@@ -27,15 +27,19 @@ public class PracticeFormTests extends TestBase {
                 StudentData.ADDRESS);
 
         new PracticeFormPage(driver)
+                .hideIframes()
                 .selectGender(StudentData.GENDER)
+//                .chooseDate("May", "2021", "15")
                 .typeOfDate(StudentData.DATE_OF_BIRTHDAY)
                 .addSubject(StudentData.SUBJECT)
                 .chooseHobby(StudentData.HOBBIES)
-                .uploadFile(StudentData.PHOTO_PATH)
+//                .uploadFile(StudentData.PHOTO_PATH)
                 .enterState(StudentData.STATE)
                 .enterCity(StudentData.CITY)
                 .clickOnSubmit();
 
         Assert.assertTrue(new PracticeFormPage(driver).submittingForm().contains("Thanks for submitting the form"));
+
+        new PracticeFormPage(driver).closeModalDialog();
     }
 }
