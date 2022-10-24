@@ -6,6 +6,7 @@ import com.telran.pages.alertsWindows.NestedFramesPage;
 import com.telran.pages.bookstore.ProfilePage;
 import com.telran.pages.elements.ButtonsPage;
 import com.telran.pages.alertsWindows.FramePage;
+import com.telran.pages.elements.TextBoxPage;
 import com.telran.pages.forms.PracticeFormPage;
 import com.telran.pages.interactions.DragAndDropPage;
 import com.telran.pages.widgets.MenuPage;
@@ -72,7 +73,7 @@ public class SidePanelPage extends BasePage {
     @FindBy(xpath = "//span[.='Nested Frames']")
     WebElement nestedFrames;
 
-    public NestedFramesPage selectNesredFrames() {
+    public NestedFramesPage selectNestedFrames() {
         clickWithJSExecutor(nestedFrames, 0, 300);
         return new NestedFramesPage(driver);
     }
@@ -107,5 +108,13 @@ public class SidePanelPage extends BasePage {
     public SliderPage selectSlider(){
         clickWithJSExecutor(slider, 0, 500);
         return new SliderPage(driver);
+    }
+
+    @FindBy(xpath = "//span[.='Text Box']")
+    WebElement textBox;
+
+    public TextBoxPage selectTextBox(){
+        click(textBox);
+        return new TextBoxPage(driver);
     }
 }

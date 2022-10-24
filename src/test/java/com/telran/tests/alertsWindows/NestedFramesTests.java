@@ -13,7 +13,7 @@ public class NestedFramesTests extends TestBase {
     @BeforeMethod
     public void ensurePrecondition(){
         new HomePage(driver).selectAlertsFrameWindows();
-        new SidePanelPage(driver).selectNesredFrames();
+        new SidePanelPage(driver).selectNestedFrames();
     }
 
     @Test

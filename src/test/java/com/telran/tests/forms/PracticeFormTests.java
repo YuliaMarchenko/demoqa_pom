@@ -5,7 +5,7 @@ import com.telran.pages.HomePage;
 import com.telran.pages.SidePanelPage;
 import com.telran.pages.forms.PracticeFormPage;
 import com.telran.tests.TestBase;
-import com.telran.tests.utils.DataProviders;
+import com.telran.utils.DataProviders;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

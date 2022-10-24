@@ -5,7 +5,6 @@ import com.telran.pages.SidePanelPage;
 import com.telran.pages.widgets.MenuPage;
 import com.telran.pages.widgets.SliderPage;
 import com.telran.tests.TestBase;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
