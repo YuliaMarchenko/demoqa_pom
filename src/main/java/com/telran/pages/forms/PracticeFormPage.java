@@ -125,6 +125,14 @@ public class PracticeFormPage extends BasePage {
         return this;
     }
 
+    public PracticeFormPage enterPersonalData2(String name, String surname, String email, String mobil) {
+        firstName.sendKeys(name);
+        lastName.sendKeys(surname);
+        userEmail.sendKeys(email);
+        userNumber.sendKeys(mobil);
+        return this;
+    }
+
     @FindBy(id = "state")
     WebElement stateId;
 
@@ -177,6 +185,7 @@ public class PracticeFormPage extends BasePage {
 
     public PracticeFormPage closeModalDialog() {
         closeBanner();
+        pause(1000);
         clickWithJSExecutor(close, 0, 900);
         return this;
     }
@@ -201,6 +210,11 @@ public class PracticeFormPage extends BasePage {
 
         driver.findElement(By.xpath("//div[@class='react-datepicker__week']//div[.='" + day + "']"));
 
+        return this;
+    }
+
+    public PracticeFormPage addAddress(String address){
+        currentAddress.sendKeys(address);
         return this;
     }
 }
