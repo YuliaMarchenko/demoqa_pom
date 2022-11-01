@@ -1,4 +1,0 @@
-7667 [main] INFO  com.telran.tests.TestBase - Test start fillAllDataWithDataProviderTest with data: [Petr, ivanov@gmail.com, BerlinMoabit, BerlinMitte]
-14942 [main] INFO  com.telran.tests.TestBase - Passed: fillAllDataWithDataProviderTest
-20916 [main] INFO  com.telran.tests.TestBase - Test start fillAllDataWithDataProviderTest with data: [Petr, ivanov@gmail.com, BerlinMoabit, BerlinMitte]
-26939 [main] INFO  com.telran.tests.TestBase - Passed: fillAllDataWithDataProviderTest
