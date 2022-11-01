@@ -5,6 +5,7 @@ import com.telran.pages.SidePanelPage;
 import com.telran.pages.widgets.MenuPage;
 import com.telran.pages.widgets.SliderPage;
 import com.telran.tests.TestBase;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,6 @@ public class MenuTests extends TestBase {
     public void sliderTest(){
         new SidePanelPage(driver).selectSlider();
         new SliderPage(driver).moveSliderInHorriszontal();
-        //Assert.assertEquals();
+        Assert.assertTrue(new SliderPage(driver).isSliderDisplayed(60));
     }
 }

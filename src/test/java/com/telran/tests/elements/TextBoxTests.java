@@ -29,4 +29,10 @@ public class TextBoxTests extends TestBase {
         new TextBoxPage(driver).fillAllData(TextBoxData.NAME, TextBoxData.EMAIL, TextBoxData.CURRENT_ADDRESS, TextBoxData.PERMANENT_ADDRESS).clickOnSubmit();
         Assert.assertTrue(new TextBoxPage(driver).submittingForm().contains("Name:"));
     }
+
+    @Test
+    public void keyBoardEventTest(){
+        new TextBoxPage(driver).keyBoardEvent();
+        Assert.assertEquals(new TextBoxPage(driver).getAttribute(), TextBoxData.CURRENT_ADDRESS);
+    }
 }

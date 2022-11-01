@@ -1,10 +1,13 @@
 package com.telran.pages.widgets;
 
 import com.telran.pages.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SliderPage extends BasePage {
     public SliderPage(WebDriver driver) {
@@ -14,20 +17,22 @@ public class SliderPage extends BasePage {
     @FindBy(css = ".range-slider")
     WebElement slider;
 
-    @FindBy(id = "sliderValue")
-    WebElement sliderValue;
-
     public SliderPage moveSliderInHorriszontal(){
         Actions actions = new Actions(driver);
-      //  actions.moveToElement(slider, 80,0).perform();
-       // click(slider);
-      //  actions.dragAndDropBy(slider, 20,0).perform();
-
-//        actions.clickAndHold(slider, (-(int)slider.getSize().width / 2), 0).perform();
+        int width = slider.getSize().getWidth();
+        actions.moveToElement(slider, width/10,0).click().perform();
         return this;
     }
 
-    public String getTestSliderValue(){
-        return sliderValue.getText();
+    @FindBy(id = "sliderValue")
+    WebElement sliderValue;
+
+    public boolean isSliderDisplayed(int number){
+        should(sliderValue, 10);
+        return driver.findElement(By.cssSelector("#sliderValue[value='" + number + "']")).isDisplayed();
+    }
+
+    public void should(WebElement element, int time){
+        new WebDriverWait(driver, time).until(ExpectedConditions.visibilityOf(element));
     }
 }
