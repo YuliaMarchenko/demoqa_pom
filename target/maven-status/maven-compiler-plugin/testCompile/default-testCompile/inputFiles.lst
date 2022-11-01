@@ -1,0 +1,17 @@
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/widgets/SelectTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/alertsWindows/WindowsTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/bookstore/AddBookTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/alertsWindows/AlertTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/bookstore/LoginTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/forms/PracticeFormTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/widgets/MenuTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/interactions/DropDragTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/alertsWindows/NestedFramesTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/alertsWindows/FramesTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/elements/BrokenLinksTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/elements/TextBoxTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/elements/UploadAndDownloadPageTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/bookstore/SearchBookTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/elements/ButtonTests.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/TestBase.java
+/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/java/com/telran/tests/JSTests.java
