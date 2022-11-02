@@ -1,4 +1,0 @@
-6544 [main] INFO  com.telran.tests.TestBase - Test start loginPositiveParametersTest with data: [test1@test.com, testTEST12!]
-22376 [main] INFO  com.telran.tests.TestBase - Passed: loginPositiveParametersTest
-27573 [main] INFO  com.telran.tests.TestBase - Test start loginPositiveTest with data: []
-41472 [main] INFO  com.telran.tests.TestBase - Passed: loginPositiveTest

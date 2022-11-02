@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-User" class="navigator-link ">
-                    <span>testngUser.xml</span>
+                    <span>testsearchBook.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,12 +102,7 @@
                     <div class="method-list-content passed suite-User">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User" title="com.telran.tests.bookstore.LoginTests" class="method navigator-link" hash-for-method="loginPositiveParametersTest(test1@test.com, testTEST12!)">loginPositiveParametersTest(test1@test.com, testTEST12!)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-User" title="com.telran.tests.bookstore.LoginTests" class="method navigator-link" hash-for-method="loginPositiveTest">loginPositiveTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-User" title="com.telran.tests.bookstore.SearchBookTests" class="method navigator-link" hash-for-method="searchBookPositiveForGuestTest">searchBookPositiveForGuestTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-User -->
@@ -125,22 +120,14 @@
           <div class="suite-User-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.telran.tests.bookstore.LoginTests</span>
+              <span class="class-name">com.telran.tests.bookstore.SearchBookTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginPositiveParametersTest(test1@test.com, testTEST12!)">
-                  </a> <!-- loginPositiveParametersTest(test1@test.com, testTEST12!) -->
-                  <span class="method-name">loginPositiveParametersTest</span>
-                  <span class="parameters">(test1@test.com, testTEST12!)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginPositiveTest">
-                  </a> <!-- loginPositiveTest -->
-                  <span class="method-name">loginPositiveTest</span>
+                  <a name="searchBookPositiveForGuestTest">
+                  </a> <!-- searchBookPositiveForGuestTest -->
+                  <span class="method-name">searchBookPositiveForGuestTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -148,7 +135,7 @@
         </div> <!-- panel User -->
         <div panel-name="test-xml-User" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/resources/testngUser.xml</span>
+            <span class="header-content">/Users/yulia_marchenko/seleniumQA/demoqa_pom/src/test/resources/testsearchBook.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -157,10 +144,7 @@
 &lt;suite name=&quot;User&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;User&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.telran.tests.bookstore.LoginTests&quot;&gt;
-        &lt;parameter name=&quot;name&quot; value=&quot;test1@test.com&quot;/&gt;
-        &lt;parameter name=&quot;password&quot; value=&quot;testTEST12!&quot;/&gt;
-      &lt;/class&gt; &lt;!-- com.telran.tests.bookstore.LoginTests --&gt;
+      &lt;class name=&quot;com.telran.tests.bookstore.SearchBookTests&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- User --&gt;
 &lt;/suite&gt; &lt;!-- User --&gt;
@@ -200,20 +184,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginPositiveParametersTest')
-data.setCell(0, 2, 'com.telran.tests.bookstore.LoginTests')
-data.setCell(0, 3, 9369);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginPositiveTest')
-data.setCell(1, 2, 'com.telran.tests.bookstore.LoginTests')
-data.setCell(1, 3, 6506);
+data.setCell(0, 1, 'searchBookPositiveForGuestTest')
+data.setCell(0, 2, 'com.telran.tests.bookstore.SearchBookTests')
+data.setCell(0, 3, 11902);
 window.suiteTableData['User']= { tableData: data, tableDiv: 'times-div-User'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-User">
               </div> <!-- times-div-User -->
             </div> <!-- times-div -->
@@ -239,62 +219,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.telran.tests.bookstore.LoginTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.telran.tests.bookstore.SearchBookTests</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">init</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
-                <span class="method-name">startTest(public void com.telran.tests.bookstore.LoginTests.loginPositiveParametersTest(java.lang.String,java....)</span>
-                <span class="method-start">6324 ms</span>
+                <span class="method-name">startTest(public void com.telran.tests.bookstore.SearchBookTests.searchBookPositiveForGuestTest(), [])</span>
+                <span class="method-start">14495 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">ensurePrecondition</span>
-                <span class="method-start">6329 ms</span>
+                <span class="method-start">14502 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginPositiveParametersTest(test1@test.com, testTEST12!)</span>
-                <span class="method-start">12601 ms</span>
+                <span class="method-name">searchBookPositiveForGuestTest</span>
+                <span class="method-start">15861 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">logOut</span>
-                <span class="method-start">21977 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">stopTest([TestResult name=loginPositiveParametersTest status=SUCCESS method=LoginTests.loginPositiveParameter...)</span>
-                <span class="method-start">22158 ms</span>
+                <span class="method-name">stopTest([TestResult name=searchBookPositiveForGuestTest status=SUCCESS method=SearchBookTests.searchBookPosi...)</span>
+                <span class="method-start">27770 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22160 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">init</span>
-                <span class="method-start">22369 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">startTest(public void com.telran.tests.bookstore.LoginTests.loginPositiveTest(), [])</span>
-                <span class="method-start">27354 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">ensurePrecondition</span>
-                <span class="method-start">27356 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">loginPositiveTest</span>
-                <span class="method-start">34560 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logOut</span>
-                <span class="method-start">41070 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">stopTest([TestResult name=loginPositiveTest status=SUCCESS method=LoginTests.loginPositiveTest()[pri:0, insta...)</span>
-                <span class="method-start">41255 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">41256 ms</span>
+                <span class="method-start">27775 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
